@@ -1,13 +1,9 @@
-FROM python:3.9-alpine as builder
+FROM python:3.9-alpine
 
 RUN apk --no-cache --update-cache add gcc \
     gfortran \
     build-base \
     freetype-dev \
     libpng-dev \
-    openblas-dev
-
-RUN apk add py-pandas
-
-RUN pip3 install -U pip setuptools
-RUN pip3 install -Iv pandas==1.5.1
+    openblas-dev \
+    py-pandas
