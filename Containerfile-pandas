@@ -1,0 +1,12 @@
+FROM python:3.9-alpine as builder
+
+RUN apk --no-cache --update-cache add gcc \
+    gfortran \
+    python-dev \
+    build-base \
+    freetype-dev \
+    libpng-dev \
+    openblas-dev
+
+RUN pip3 install --upgrade pip3
+RUN pip3 install --no-cache-dir numpy scipy pandas
