@@ -1,9 +1,6 @@
-FROM python:3.9-alpine
+FROM python:3.9-slim
 
-RUN apk --no-cache --update-cache add gcc \
-    gfortran \
-    build-base \
-    freetype-dev \
-    libpng-dev \
-    openblas-dev \
-    py-pandas
+RUN apt update && apt install -y --no-install-recommends gcc \
+    && pip install pandas \
+    && apt remove -y gcc \
+    && rm -rf /var/lib/apt/lists/*
