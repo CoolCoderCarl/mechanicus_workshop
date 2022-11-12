@@ -6,7 +6,9 @@ on:
     paths-ignore:
       - 'README.md'
       - '.gitignore'
-      - 'changelog.json'
+      - '.dockerignore'
+    paths:
+      - 'pandas'
 
 jobs:
 
@@ -18,7 +20,7 @@ jobs:
         include:
           - os: ubuntu-latest
             SERVICENAME: emperor_pandas
-            CONTAINERFILE: Containerfile-pandas
+            CONTAINERFILE: pandas/Containerfile-pandas
 
     steps:
 
