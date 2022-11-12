@@ -1,6 +1,7 @@
 # mechanicus_workshop
 Special repo for automation building 
 
+![Alt text](mechanicus_emblem.webp)
 
 ## Prehistory
 Need special place to store all important builds blueprints
