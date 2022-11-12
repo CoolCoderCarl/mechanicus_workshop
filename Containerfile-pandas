@@ -2,7 +2,6 @@ FROM python:3.9-alpine as builder
 
 RUN apk --no-cache --update-cache add gcc \
     gfortran \
-    python-dev \
     build-base \
     freetype-dev \
     libpng-dev \
